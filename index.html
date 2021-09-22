@@ -4,52 +4,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--<link rel="stylesheet" href="index.css">-->
+    <link rel="stylesheet" href="index.css">
     <script src="index.js" defer></script>
     <title>Codificador</title>
 </head>
 <body>
     <header>
-        <nav>
-
-            <ul class="">
-                <li><a href="">INÍCIO</a></li>
-
-
-            </ul>
-        </nav>
+        <ul class="texto-din">
+            <li><span>RESILIA - CODIFICADOR</span></li>
+            <li><span>Cifra de César</span></li>
+            <li><span>Base 64</span></li>
+        </ul>
         
     </header>
     <main>
-        <section>
-            <div id="div1">
-                <label for="Texto Inicial">Escreva a tua mensagem:</label>
-                <textarea name="Texto Entrada" id="textInit" cols="30" rows="10"></textarea> <!-- Entrada do texto (dec-cod)-->
+        <section class="caixa">
+            <div class="form">
+                <div id="div1">
+                    <label for="Texto Inicial">Escreva a tua mensagem:</label>
+                    <textarea name="Texto Entrada" id="textInit" cols="30" rows="10"></textarea> <!-- Entrada do texto (dec-cod)-->
+                </div>
+                <div id="div2">
+                    <label for="Escolha">Escolha qual código você deseja usar:</label> <!--Escolher-->
+                    <select name="Selecionar" id="select"> <!--Seletor-->
+                        <option value="Cifra de César" id="cc">Cifra de César</option> <!--Caso esse, aciona a função cC, quando selecionada está opção abre a caixa de texto que seleciona o shift-->
+                        <option value="Base64" id="b64">Base64</option> <!--Caso este aciona a função ba64-->
+                    </select>
+                   
+                </div>
+                <div id="div3">
+                    <label for="Cod/Decodi">Escolha se você quer codificar ou decodificar o teu texto:</label>
+                    <br>
+                    <input type="radio" name="Codificador" id="codi" checked>Codificar<!--Caso selecionado, aciona a parte da função que codifica; abre também o botão codificar-->
+                    <br>
+                    <input type="radio" name="Codificador" id="decodi">Decodificar<!--Caso selecionado, aciona a parte da função que decodifica; abre também o botão decodificar-->
+                    <br>
+                    <input type="number" value="1" id="Shift" placeholder="0" >
+                </div>
+                <div id="div4">
+                    <label for="Texto Final">Mensagem codificada/decodificada</label>
+                    <textarea name="Texto Saída" id="textEnd" cols="30" rows="10"></textarea> <!--Saída do texto (cod/dec)-->
+                </div>
             </div>
-            <div id="div2">
-                <label for="Escolha">Escolha qual código você deseja usar:</label> <!--Escolher-->
-                <select name="Selecionar" id="select"> <!--Seletor-->
-                    <option value="Cifra de César" id="cc">Cifra de César</option> <!--Caso esse, aciona a função cC, quando selecionada está opção abre a caixa de texto que seleciona o shift-->
-                    <option value="Base64" id="b64">Base64</option> <!--Caso este aciona a função ba64-->
-                </select>
-               
-            </div>
-            <div id="div3">
-                <label for="Cod/Decodi">Escolha se você quer codificar ou decodificar o teu texto:</label>
-                <input type="radio" name="Codificador" id="codi" checked>Codificar<!--Caso selecionado, aciona a parte da função que codifica; abre também o botão codificar-->
-                <input type="radio" name="Codificador" id="decodi">Decodificar<!--Caso selecionado, aciona a parte da função que decodifica; abre também o botão decodificar-->
-                <input type="number" value="1" id="Shift" placeholder="0" >
-            </div>
-            <div id="div4">
-                <label for="Texto Final">Mensagem codificada/decodificada</label>
-                <textarea name="Texto Saída" id="textEnd" cols="30" rows="10"></textarea> <!--Saída do texto (cod/dec)-->
-            </div>
+            
         </section>
     </main>
     <footer>
         <ul class="redes-sociais">
-            <li><a href="">Instagram</a></li>
-            <li><a href="">Linkedin</a></li>
+            <li><a href="https://www.instagram.com/analaura_ns/">Instagram</a></li>
+            <li><a href="https://www.linkedin.com/in/ana-laura-nascimento-da-silva/">Linkedin</a></li>
         </ul>
         <p>Feito por Ana Laura Nascimento, para fins educativos.</p>
     </footer>
